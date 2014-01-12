@@ -1,0 +1,28 @@
+{
+  "name": "express-middleware-sse",
+  "version": "0.0.0",
+  "description": "Express middleware to handle Server Sent Events with love",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wilk/express-middleware-sse.git"
+  },
+  "keywords": [
+    "sse",
+    "server-sent-events",
+    "middleware",
+    "express"
+  ],
+  "author": "Vincenzo (Wilk) Ferrari <wilk3ert@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wilk/express-middleware-sse/issues"
+  },
+  "homepage": "https://github.com/wilk/express-middleware-sse",
+  "devDependencies": {
+    "express": "~3.4.7"
+  }
+}
