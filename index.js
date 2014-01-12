@@ -52,15 +52,15 @@ module.exports = function () {
 			}
 
 			// Headers
-		    res.writeHead (200, {
+			res.writeHead (200, {
 				'Content-Type': 'text/event-stream',
-			    'Cache-Control': 'no-cache',
+				'Cache-Control': 'no-cache',
 				'Connection': 'keep-alive' ,
 				'Access-Control-Allow-Origin': '*'
 			});
 			
-		    res.write (msgs.join ("\n") + "\n");
-        };
+			res.write (msgs.join ("\n") + "\n");
+		};
 	};
 	
 	return function (req, res, next) {
