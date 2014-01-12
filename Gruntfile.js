@@ -17,7 +17,7 @@ module.exports = function (grunt) {
                 smarttabs: true
             } ,
             dist: {
-                src: ['index.js']
+                src: ['index.js', 'test/mw-sse.js']
             }
         } ,
         watch: {
@@ -25,6 +25,11 @@ module.exports = function (grunt) {
                 files: ['index.js', 'Gruntfile.js'] ,
                 tasks: ['jshint']
             }
+        } ,
+        mochaTest: {
+        	dist: {
+        		src: ['test/mw-sse.js']
+        	}
         } ,
         express: {
             livereload: {
@@ -46,5 +51,6 @@ module.exports = function (grunt) {
         }
     });
 
+	grunt.registerTask ('test', ['jshint', 'mochaTest']);
     grunt.registerTask ('server', ['express', 'connect:livereload', 'watch']);
 };
