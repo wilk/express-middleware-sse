@@ -4,8 +4,9 @@ module.exports = function () {
 	var buildSSEResponse = function (res) {
 		return function () {
 			var util = require ('util') ,
-				msgs = [] ,
-				args = arguments;
+					_ = require ('underscore') ,
+					msgs = [] ,
+					args = arguments;
 			
 			// SSE has to send something, otherwise throws an error
 			if (args.length === 0) throw new Error ('res.sse :: expected a parameter');
